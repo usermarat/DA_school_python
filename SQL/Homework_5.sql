@@ -1,7 +1,7 @@
 --task5  (lesson6)
--- Êîìïüþòåðíàÿ ôèðìà: Ñîçäàòü òàáëèöó all_products_with_index_task5 êàê îáúåäèíåíèå âñåõ äàííûõ ïî êëþ÷ó code (union all)
--- è ñäåëàòü ôëàã (flag) ïî öåíå > ìàêñèìàëüíîé ïî ïðèíòåðó. Òàêæå äîáàâèòü íóìåðàöèþ (÷åðåç îêîííûå ôóíêöèè) 
--- ïî êàæäîé êàòåãîðèè ïðîäóêòà â ïîðÿäêå âîçðàñòàíèÿ öåíû (price_index). Ïî ýòîìó price_index ñäåëàòü èíäåêñ
+-- ÐšÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð½Ð°Ñ Ñ„Ð¸Ñ€Ð¼Ð°: Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ all_products_with_index_task5 ÐºÐ°Ðº Ð¾Ð±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ð²ÑÐµÑ… Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ code (union all)
+-- Ð¸ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ Ñ„Ð»Ð°Ð³ (flag) Ð¿Ð¾ Ñ†ÐµÐ½Ðµ > Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ð¿Ð¾ Ð¿Ñ€Ð¸Ð½Ñ‚ÐµÑ€Ñƒ. Ð¢Ð°ÐºÐ¶Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½ÑƒÐ¼ÐµÑ€Ð°Ñ†Ð¸ÑŽ (Ñ‡ÐµÑ€ÐµÐ· Ð¾ÐºÐ¾Ð½Ð½Ñ‹Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸) 
+-- Ð¿Ð¾ ÐºÐ°Ð¶Ð´Ð¾Ð¹ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ Ð¿Ñ€Ð¾Ð´ÑƒÐºÑ‚Ð° Ð² Ð¿Ð¾Ñ€ÑÐ´ÐºÐµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸Ñ Ñ†ÐµÐ½Ñ‹ (price_index). ÐŸÐ¾ ÑÑ‚Ð¾Ð¼Ñƒ price_index ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ Ð¸Ð½Ð´ÐµÐºÑ
 
 create table all_products_with_index_task5 as
 select *,
@@ -11,9 +11,9 @@ from all_products_with_index_task4
 
 CREATE INDEX price_idx ON all_products_with_index_task5 (price_index)
 
---task1  (lesson6, äîïîëíèòåëüíî)
--- SQL: Ñîçäàéòå òàáëèöó ñ ñèíòåòè÷åñêèìè äàííûìè (10000 ñòðîê, 3 êîëîíêè, âñå òèïû int) è çàïîëíèòå åå ñëó÷àéíûìè äàííûìè îò 0 äî 1 000 000. 
--- Ïðîâåäèòå EXPLAIN îïåðàöèè è ñðàâíèòå áàçîâûå îïåðàöèè.
+--task1  (lesson6, Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾)
+-- SQL: Ð¡Ð¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ Ñ ÑÐ¸Ð½Ñ‚ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¼Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ð¼Ð¸ (10000 ÑÑ‚Ñ€Ð¾Ðº, 3 ÐºÐ¾Ð»Ð¾Ð½ÐºÐ¸, Ð²ÑÐµ Ñ‚Ð¸Ð¿Ñ‹ int) Ð¸ Ð·Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚Ðµ ÐµÐµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¼Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ð¼Ð¸ Ð¾Ñ‚ 0 Ð´Ð¾ 1 000 000. 
+-- ÐŸÑ€Ð¾Ð²ÐµÐ´Ð¸Ñ‚Ðµ EXPLAIN Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸ Ð¸ ÑÑ€Ð°Ð²Ð½Ð¸Ñ‚Ðµ Ð±Ð°Ð·Ð¾Ð²Ñ‹Ðµ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸.
 
 drop table synth
 
@@ -222,8 +222,10 @@ from synth
 |Execution time: 9.439 ms                                                                                            |
 
 
---task2 (lesson6, äîïîëíèòåëüíî)
--- GCP (Google Cloud Platform): ×åðåç GCP çàãðóçèòå äàííûå csv â áàçó PSQL ïî ëè÷íûì ðåêâèçèòàì (èñïîëüçóÿ òîëüêî bash è èíòåðôåéñ bash) 
+--task2 (lesson6, Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾)
+-- GCP (Google Cloud Platform): Ð§ÐµÑ€ÐµÐ· GCP Ð·Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ csv Ð² Ð±Ð°Ð·Ñƒ PSQL Ð¿Ð¾ Ð»Ð¸Ñ‡Ð½Ñ‹Ð¼ Ñ€ÐµÐºÐ²Ð¸Ð·Ð¸Ñ‚Ð°Ð¼ (Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ bash Ð¸ Ð¸Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ bash) 
+
+Ð¢ÐµÐºÑÑ‚ ÐºÐ¾Ð¼Ð°Ð½Ð´ Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸:
 
 usermarat1@cloudshell:~ (my-project1-324117)$ echo "create table avocado (id int, date timestamp, average_price float, total_vol float, col_4046 float, col_4225 float, col_4770 float, total_bags float, small_bags float, large_bags float, xlarge_bags float, type varchar (20), year int, region varchar (20))" >> t_create.sql
 usermarat1@cloudshell:~ (my-project1-324117)$ psql -h 52.157.159.24 -Ustudent3 sql_ex_for_student3 < t_create.sql
